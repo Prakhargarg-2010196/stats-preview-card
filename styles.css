@@ -93,9 +93,7 @@ html {
 	text-transform: uppercase;
 	font-size: smaller;
 }
-.attribution {
-	margin-left: 130px;
-}
+
 @media (max-width: 480px) {
 	.container {
 		border-radius: 10px;
@@ -156,7 +154,5 @@ html {
 	.stat-bar .stat-bar-heading {
 		margin-bottom: 12px;
 	}
-	.attribution {
-		margin: 0 0;
-	}
+	
 }
