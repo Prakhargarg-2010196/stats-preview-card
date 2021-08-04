@@ -10,10 +10,10 @@
 	box-sizing: border-box;
 	font-family: "Lexend Deca", "Inter", "sans-serif";
 }
-em {
+span {
 	color: hsl(277, 64%, 61%);
-	font-style: normal;
 }
+
 body,
 html {
 	background-color: hsl(233, 47%, 7%);
@@ -21,48 +21,45 @@ html {
 	color: #fff;
 	overflow: hidden;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	
+	height: 100vh;
+	font-weight: 700;
 }
 .container {
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	margin:150px auto;
 }
+
+/* card content styles */
 .card-content {
 	padding: 50px;
-	padding-right: 70px;
 	background-color: hsl(244, 38%, 16%);
-	border-radius: inherit;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	width: 100%;
 }
-.card-content h1 {
-	font-weight: 700;
-}
 .card-content p {
 	margin: 13px 0 50px 0;
 	color: hsla(0, 0%, 100%, 0.75);
-
 	font-size: smaller;
 }
-.card-image {
+
+/* card image styles */
+.card-image-desktop {
 	background: url(/images/image-header-desktop.jpg);
-	background-position: center center;
 	background-size: cover;
 	width: 100%;
+	padding-right: 150px;
 	position: relative;
-	border-radius: inherit;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
-	filter: contrast(150%);
-	padding-right: 150px;
+	filter: contrast(200%);
 }
-.overlay {
+.overlay-desktop {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -75,6 +72,7 @@ html {
 	opacity: 0.5;
 }
 
+/* Statistics bar */
 .stat-bar {
 	display: flex;
 	flex-direction: row;
@@ -86,9 +84,7 @@ html {
 
 .stat-bar .stat-bar-stat {
 	color: hsl(0, 0%, 100%);
-	font-weight: 700;
 	font-size: large;
-
 	margin-bottom: 2px;
 }
 .stat-bar .stat-bar-heading {
@@ -96,26 +92,26 @@ html {
 	text-transform: uppercase;
 	font-size: smaller;
 }
-
-@media (max-width: 480px) {
+/* media queries for mobile screens
+ */
+@media (max-width: 380px) {
 	.container {
-		border-radius: 10px;
-		display: flex;
 		flex-direction: column;
 		width: 80%;
 	}
+
+	/* card image styles for mobile */
 	.card-image-mobile {
 		background: url(/images/image-header-mobile.jpg);
-		background-position: center center;
 		background-size: cover;
+		background-repeat: no-repeat;
 		padding: 120px;
 		position: relative;
-		border-radius: inherit;
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
-		filter: contrast(150%);
+		filter: contrast(200%);
 	}
-	.card-image-mobile .overlay-mobile {
+	.overlay-mobile {
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -127,31 +123,26 @@ html {
 		background-color: hsl(277, 64%, 61%);
 		opacity: 0.5;
 	}
-	.card-image {
+
+	/* code to hide the image of desktop  */
+	.card-image-desktop {
 		display: none;
 	}
 
+	/* card-content for mobile */
 	.card-content {
-		background-color: hsl(244, 38%, 16%);
-		border-radius: inherit;
 		border-top-right-radius: 0;
 		border-top-left-radius: 0;
-		width: 100%;
 		text-align: center;
-	}
-	.card-content h1 {
-		font-weight: 700;
 	}
 	.card-content p {
 		margin: 50px 0 50px 0;
-		color: hsla(0, 0%, 100%, 0.75);
-		font-size: smaller;
-		display: block;
 	}
+
+	/* statistics-bar */
 	.stat-bar {
-		display: flex;
 		flex-direction: column;
-		margin-left: 10px;
+		margin-left: 22px;
 	}
 	.stat-bar .stat-bar-heading {
 		margin-bottom: 12px;

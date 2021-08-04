@@ -116,6 +116,7 @@ margin-bottom: 12px;
 ```
 
 - The overlay over the image.
+
  I took the inspiration from the stackoverflow post that i would link in the resources.
  Also I used the filter property of the CSS to increase the contrast as due to overlay the image was a little bit dull.
  You can refer to my code below.
