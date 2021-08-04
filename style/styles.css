@@ -94,7 +94,7 @@ html {
 }
 /* media queries for mobile screens
  */
-@media (max-width: 380px) {
+@media (max-width: 480px) {
 	.container {
 		flex-direction: column;
 		width: 80%;
