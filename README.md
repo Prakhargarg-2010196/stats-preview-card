@@ -1,91 +1,208 @@
-# Frontend Mentor - Stats preview card component
+# Frontend Mentor - Stats preview card component solution
 
-![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Stats preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+- [The challenge](#the-challenge)
+- [Screenshot](#screenshot)
+- [Links](#links)
+- [My process](#my-process)
+- [Built with](#built-with)
+- [What I learned](#what-i-learned)
+- [Continued development](#continued-development)
+- [Useful resources](#useful-resources)
+- [Author](#Author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML and CSS.**
+This was a basic card that was put forward by the frontend mentor as a challenge and the experience of making it was very thrilling and enjoyable as I learned a whole lot using this project.
 
-## The challenge
+### The challenge
 
-Your challenge is to build out this card component and get it looking as close to the design as possible.
+The challenge required me to produce the card in the preview with the following requirements. i.e.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout depending on their device's screen size
+- Adjust the items and also manage not to break any of them.
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+## Screenshots of my implementaion
 
-## Where to find everything
+### Desktop-Screenshot
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+![desktop-screenshot](/images/desktop-screenshot.png)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+### Mobile-Screenshot
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+![mobile-screenshot](/images/mobile-screenshot.png)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Links
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Solution URL: [My-solution](https://www.frontendmentor.io/solutions/statpreview-card-using-htmlcss-only-vu1DsgHf_)
+- Live Site URL: [Solution-site](https://stat-preview-card-prakhar-dev.netlify.app/)
 
-## Building your project
+## My process
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+I started by laying out the structure of the challenge for the desktop interface then I followed step-by-step CSS by previewing the designs by opening them in my preview of the browser or you can paste them in figma to watch all of them at the same moment this makes the working easy , while coding. After wards I wrote some media queries which were quite repetitive to the code written for the desktop just written explicitly for different class otherwise inside code was pretty much the same.
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### Built with
 
-## Deploying your project
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Media-queries
+- Mobile-first workflow
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+### What I learned
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- How the flex-box works
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+The following is the stat-bar i built using flexbox which contained ul elements which in-turn contain two elements stat-bar-stat (example:10k+) and stat-bar-heading(example:companies). Using flex-box i was at ease arranging them in rows and column using just CSS for both desktop and mobile environment using properties shown below in CSS code.
 
-## Create a custom `README.md`
+```html
+<div class="stat-bar">
+ <ul>
+  <li class="stat-bar-stat">10k+</li>
+  <li class="stat-bar-heading">Companies</li>
+ </ul>
+ <ul>
+<li class="stat-bar-stat">314</li>
+<li class="stat-bar-heading">Templates</li>
+</ul>
+<ul>
+<li class="stat-bar-stat">12M+</li>
+<li class="stat-bar-heading">queries</li>
+</ul>
+</div>
+```
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+```CSS
+/* For desktop CSS of flex box: */
+.stat-bar {
+display: flex;
+flex-direction: row;
+}
+.stat-bar ul {
+list-style: none;
+margin-right: 30px;
+}
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+.stat-bar .stat-bar-stat {
+color: hsl(0, 0%, 100%);
+font-weight: 700;
+font-size: large;
+margin-bottom: 2px;
+}
+.stat-bar .stat-bar-heading {
+color: hsla(0, 0%, 100%, 0.75);
+text-transform: uppercase;
+font-size: smaller;
+}
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+/* For mobile the following media query was written */
+@media(max-width:480px)
+{
+.stat-bar {
+display: flex;
+flex-direction: column;
+margin-left: 10px;
+}
+.stat-bar .stat-bar-heading {
+margin-bottom: 12px;
+}
+}
+```
 
-## Submitting your solution
+- The overlay over the image.
+ I took the inspiration from the stackoverflow post that i would link in the resources.
+ Also I used the filter property of the CSS to increase the contrast as due to overlay the image was a little bit dull.
+ You can refer to my code below.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+ ```Html
+ <!-- For mobile -->
+ <div class="card-image-mobile">
+<div class="overlay-mobile"></div>
+</div>
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+<!-- For desktop -->
+<div class="card-image">
+<div class="overlay"></div>
+</div>
+```
 
-## Sharing your solution
+```CSS
+/* For the desktop interface */
+.card-image {
+background: url(/images/image-header-desktop.jpg);
+background-position: center center;
+background-size: cover;
+width: 100%;
+position: relative;
+border-radius: inherit;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+filter: contrast(150%);
+}
 
-There are multiple places you can share your solution:
+.overlay {
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 0;
+border-radius: inherit;
+border-top-left-radius: 0;
+border-bottom-left-radius: 0;
+background-color: hsl(277, 64%, 61%);
+opacity: 0.5;
+}
+/* For mobile interface */
+.card-image-mobile {
+  background: url(/images/image-header-mobile.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 120px;
+  position: relative;
+  border-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  filter: contrast(150%);
+}
+.card-image-mobile .overlay-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: inherit;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: hsl(277, 64%, 61%);
+  opacity: 0.5;
+}
+```
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+### Continued development
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+I am still not comfortable with:
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- The accessibility issues of the site.
+- Centring the content appropriately with different sizes of screen.
 
-## Got feedback for us?
+- Also the background images should be set properly and the images should not overflow.
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+### Useful resources
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- [Flexbox-guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This helped me for the flex-box implementation.
+ I really liked how they have explained everything so beautifully and appropriately.
 
-**Have fun building!** 🚀
+-[Overlay-method](https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image)-This helped me to lay an overlay over the image.
+
+-[Idea-for-filter](https://www.tutorialspoint.com/adjusting-the-image-contrast-using-css3) -This helped me to adjust the contrast of the image.
+
+## Author
+
+- Website - [Prakhar Garg](https://github.com/Prakhargarg-2010196)
+- Frontend Mentor - [@Prakhargarg-2010196](https://www.frontendmentor.io/profile/Prakhargarg-2010196)

@@ -20,19 +20,21 @@ html {
 	font-size: 15px;
 	color: #fff;
 	overflow: hidden;
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
 }
 .container {
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
-	width: 80%;
-	padding-top:150px;
-	margin: 0 auto;
+	width: 100%;
+	margin:150px auto;
 }
 .card-content {
 	padding: 50px;
-	padding-right: 10px;
+	padding-right: 70px;
 	background-color: hsl(244, 38%, 16%);
 	border-radius: inherit;
 	border-top-right-radius: 0;
@@ -58,6 +60,7 @@ html {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	filter: contrast(150%);
+	padding-right: 150px;
 }
 .overlay {
 	position: absolute;
@@ -100,7 +103,6 @@ html {
 		display: flex;
 		flex-direction: column;
 		width: 80%;
-		padding-top: 50px;
 	}
 	.card-image-mobile {
 		background: url(/images/image-header-mobile.jpg);
@@ -136,7 +138,6 @@ html {
 		border-top-left-radius: 0;
 		width: 100%;
 		text-align: center;
-		padding-left: 12px;
 	}
 	.card-content h1 {
 		font-weight: 700;
@@ -150,9 +151,9 @@ html {
 	.stat-bar {
 		display: flex;
 		flex-direction: column;
+		margin-left: 10px;
 	}
 	.stat-bar .stat-bar-heading {
 		margin-bottom: 12px;
 	}
-	
 }
